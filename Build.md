@@ -1,20 +1,23 @@
-================
 EDK II Build.exe
 ================
 
 Name
 --------
 
-Build.exe – is the master command that provides developers with a single 
+```Build.exe``` – The master command that provides developers with a single 
 command for selecting various options of a build
 
 Synopsis
 ------------
 
 ``` code
-  Build.exe [-v | -q | -d] \[-a <Arch>] [-p <DscFile>] [-m <InfFile>] [-b <Target>] [-t <TagName>] [-f FdfFile] [-r <RomImageName>]
-            [-i <FvImageName>] [-C <CapsuleImageName>] [-n ThreadNum] [-x <SkuId>] [-u] [-e] [-w] [-j <LogFile>] [-s] [-D <MACROS>]
-            [-y <ReportFile>] [-Y <ReportType>] [-F <Flags>] [--ignore-sources] [--check-usage] 
+  Build.exe [Options] [Targets]
+     Options:
+            [-v | -q | -d] \[-a <Arch>] [-p <DscFile>] [-m <InfFile>] [-b <Target>] [-t <TagName>] 
+            [-f FdfFile] [-r <RomImageName>] [-i <FvImageName>] [-C <CapsuleImageName>] 
+            [-n ThreadNum] [-x <SkuId>] [-u] [-e] [-w] [-j <LogFile>] [-s] [-D <MACROS>]
+            [-y <ReportFile>] [-Y <ReportType>] [-F <Flags>] [--ignore-sources] [--check-usage]
+     Targets:
             [All | GenC | GenMake | Fds | Libraries | Modules | Clean | CleanAll | CleanLib | run]
 
   Build.exe –h
@@ -124,7 +127,7 @@ specified in target.txt.
 
 ```
 
-Target
+Targets
 ----------
 
 If no target is given, then default target is ALL.
@@ -179,13 +182,13 @@ If no target is given, then default target is ALL.
 Status codes returned
 ---------------------
 
-+-------------+----------------------------------------+
-| Value       | Description                            |
-+=============+========================================+
-| **0**       | The action was completed as requested. |
-+-------------+----------------------------------------+
-| **Nonzero** | The action failed.                     |
-+-------------+----------------------------------------+
+
+| Value         | Description                            |
+|---------------|----------------------------------------|
+| ```0```       | The action was completed as requested. |
+| ```Nonzero``` | The action failed.                     |
+
+
 
 Examples
 ------------
@@ -196,33 +199,47 @@ Build platform: Nt32Pkg.dsc
 
 Specify the platform description file on the command line.
 
-```C:\\MyWorkspace> build -p Nt32Pkg\\Nt32Pkg.dsc –a IA32```
+```
+  C:\\MyWorkspace> build -p Nt32Pkg\\Nt32Pkg.dsc –a IA32
+```
 
 Build the platform in the current working directory if it contains a platform description file.
 
-```C:\\MyWorkspace\\Nt32Pkg> build –a IA32```
+```
+  C:\\MyWorkspace\\Nt32Pkg> build –a IA32
+  ```
 
 Build the active platform specified in the target.txt file.
 
-```C:\\ MyWorkspace> build –a Ia32```
+```
+  C:\\ MyWorkspace> build –a Ia32
+  ```
 
 Build Module: HelloWorld.inf
 
 Specify the platform and Module on the command line.
 
-```C:\\MyWorkspace> build -p Nt32Pkg\\Nt32Pkg.dsc –a IA32 –m MdeModulePkg/Application/HelloWorld/HelloWorld.inf```
+```
+  C:\\MyWorkspace> build -p Nt32Pkg\\Nt32Pkg.dsc –a IA32 –m MdeModulePkg/Application/HelloWorld/HelloWorld.inf
+  ```
 
 Specify the Module on the command line and use the active platform specified in the target.txt file.
 
-```C:\\MyWorkspace> build –a IA32 –m MdeModulePkg/Application/HelloWorld/HelloWorld.inf```
+```
+  C:\\MyWorkspace> build –a IA32 –m MdeModulePkg/Application/HelloWorld/HelloWorld.inf
+  ```
 
 Build the module in the current working directory if it contains a module description file and specify the platform on the command line.
 
-```C:\\ MyWorkspace\\MdeModulePkg\\Application\\HelloWorld> build –a Ia32 –p Nt32Pkg\\Nt32Pkg.dsc```
+```
+  C:\\ MyWorkspace\\MdeModulePkg\\Application\\HelloWorld> build –a Ia32 –p Nt32Pkg\\Nt32Pkg.dsc
+  ```
 
 Build the module in the current working directory and use the active platform specified in the target.txt file.
 
-```C:\\ MyWorkspace\\MdeModulePkg\\Application\\HelloWorld> build –a Ia32```
+```
+  C:\\ MyWorkspace\\MdeModulePkg\\Application\\HelloWorld> build –a Ia32
+  ```
 
 Bugs
 ---------
@@ -234,13 +251,12 @@ Report bugs to edk2-devel@lists.01.org
 Files
 ----------
 
-    *target.txt*, *tools_def.txt*, platform.dsc, flashmap.fdf, package.dec and 
-    module.inf.
+*target.txt*, *tools_def.txt*, platform.dsc, flashmap.fdf, package.dec and module.inf.
 
 See also
 ------------
 
-GenFds.exe
+GenFds.exe*
 
 License
 -----------
