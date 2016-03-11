@@ -38,9 +38,8 @@ files and the Makefiles for one or more modules, calls a make (NMake or make)
 program to process these Makefiles, then optionally calls GenFds to generate an 
 fd file.
 
-The build tool supports two kinds of path specifications on command line - an 
-absolutely path or a relative (to the WORKSPACE environment variable) path – in 
-command line.
+The build tool supports two kinds of path specifications on command line, an 
+absolutely path or a relative (to the WORKSPACE environment variable) path.
 
 Options
 -----------
