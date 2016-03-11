@@ -193,26 +193,26 @@ Status codes returned
 Examples
 ------------
 
-Assume that $(WORKSPACE) is C:\\MyWorkspace
+Assume that ```$(WORKSPACE)``` is *C:\MyWorkspace*
 
 1. Build platform: Nt32Pkg.dsc
 
    Specify the platform description file on the command line.
 
   ```
-    C:\\MyWorkspace> build -p Nt32Pkg\\Nt32Pkg.dsc –a IA32
+    C:\MyWorkspace> build -p Nt32Pkg/Nt32Pkg.dsc –a IA32
   ```
 
 2. Build the platform in the current working directory if it contains a platform description file.
 
   ```
-    C:\\MyWorkspace\\Nt32Pkg> build –a IA32
+    C:\MyWorkspace\Nt32Pkg> build –a IA32
   ```
 
 3. Build the active platform specified in the target.txt file.
 
   ```
-    C:\\ MyWorkspace> build –a Ia32
+    C:\ MyWorkspace> build –a Ia32
   ```
 
 4. Build Module: HelloWorld.inf
@@ -220,27 +220,27 @@ Assume that $(WORKSPACE) is C:\\MyWorkspace
   Specify the platform and Module on the command line.
 
   ```
-    C:\\MyWorkspace> build -p Nt32Pkg\\Nt32Pkg.dsc –a IA32 –m MdeModulePkg/Application/HelloWorld/HelloWorld.inf
+    C:\MyWorkspace> build -p Nt32Pkg/Nt32Pkg.dsc –a IA32 –m MdeModulePkg/Application/HelloWorld/HelloWorld.inf
   ```
 
 5. Specify the Module on the command line and use the active platform specified in the target.txt file.
 
   ```
-    C:\\MyWorkspace> build –a IA32 –m MdeModulePkg/Application/HelloWorld/HelloWorld.inf
+    C:\MyWorkspace> build –a IA32 –m MdeModulePkg/Application/HelloWorld/HelloWorld.inf
   ```
 
 6. Build the module in the current working directory if it contains a module description file and
    specify the platform on the command line.
 
   ```
-    C:\\ MyWorkspace\\MdeModulePkg\\Application\\HelloWorld> build –a Ia32 –p Nt32Pkg\\Nt32Pkg.dsc
+    C:\MyWorkspace\MdeModulePkg\Application\HelloWorld> build –a Ia32 –p Nt32Pkg/Nt32Pkg.dsc
   ```
 
 7. Build the module in the current working directory and use the active platform specified in the
    target.txt file.
 
   ```
-    C:\\ MyWorkspace\\MdeModulePkg\\Application\\HelloWorld> build –a Ia32
+    C:\MyWorkspace\MdeModulePkg\Application\HelloWorld> build –a Ia32
   ```
 
 Bugs
