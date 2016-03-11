@@ -10,13 +10,14 @@ command for selecting various options of a build
 Synopsis
 ------------
 
-``` code
+``` ini
   Build.exe [Options] [Targets]
      Options:
-            [-v | -q | -d] \[-a <Arch>] [-p <DscFile>] [-m <InfFile>] [-b <Target>] [-t <TagName>] 
+            [-v | -q | -d] [-a <Arch>] [-p <DscFile>] [-m <InfFile>] [-b <Target>] [-t <TagName>] 
             [-f FdfFile] [-r <RomImageName>] [-i <FvImageName>] [-C <CapsuleImageName>] 
             [-n ThreadNum] [-x <SkuId>] [-u] [-e] [-w] [-j <LogFile>] [-s] [-D <MACROS>]
             [-y <ReportFile>] [-Y <ReportType>] [-F <Flags>] [--ignore-sources] [--check-usage]
+            
      Targets:
             [All | GenC | GenMake | Fds | Libraries | Modules | Clean | CleanAll | CleanLib | run]
 
