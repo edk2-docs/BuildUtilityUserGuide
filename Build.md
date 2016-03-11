@@ -212,7 +212,7 @@ Assume that ```$(WORKSPACE)``` is *C:\MyWorkspace*
 3. Build the active platform specified in the target.txt file.
 
   ```
-    C:\ MyWorkspace> build –a Ia32
+    C:\ MyWorkspace> build –a IA32
   ```
 
 4. Build Module: HelloWorld.inf
@@ -233,14 +233,14 @@ Assume that ```$(WORKSPACE)``` is *C:\MyWorkspace*
    specify the platform on the command line.
 
   ```
-    C:\MyWorkspace\MdeModulePkg\Application\HelloWorld> build –a Ia32 –p Nt32Pkg/Nt32Pkg.dsc
+    C:\MyWorkspace\MdeModulePkg\Application\HelloWorld> build –a IA32 –p Nt32Pkg/Nt32Pkg.dsc
   ```
 
 7. Build the module in the current working directory and use the active platform specified in the
    target.txt file.
 
   ```
-    C:\MyWorkspace\MdeModulePkg\Application\HelloWorld> build –a Ia32
+    C:\MyWorkspace\MdeModulePkg\Application\HelloWorld> build –a IA32
   ```
 
 Bugs
