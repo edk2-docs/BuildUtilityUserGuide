@@ -195,50 +195,52 @@ Examples
 
 Assume that $(WORKSPACE) is C:\\MyWorkspace
 
-Build platform: Nt32Pkg.dsc
+1. Build platform: Nt32Pkg.dsc
 
-Specify the platform description file on the command line.
+   Specify the platform description file on the command line.
 
-```
-  C:\\MyWorkspace> build -p Nt32Pkg\\Nt32Pkg.dsc –a IA32
-```
-
-Build the platform in the current working directory if it contains a platform description file.
-
-```
-  C:\\MyWorkspace\\Nt32Pkg> build –a IA32
+  ```
+    C:\\MyWorkspace> build -p Nt32Pkg\\Nt32Pkg.dsc –a IA32
   ```
 
-Build the active platform specified in the target.txt file.
+2. Build the platform in the current working directory if it contains a platform description file.
 
-```
-  C:\\ MyWorkspace> build –a Ia32
+  ```
+    C:\\MyWorkspace\\Nt32Pkg> build –a IA32
   ```
 
-Build Module: HelloWorld.inf
+3. Build the active platform specified in the target.txt file.
 
-Specify the platform and Module on the command line.
-
-```
-  C:\\MyWorkspace> build -p Nt32Pkg\\Nt32Pkg.dsc –a IA32 –m MdeModulePkg/Application/HelloWorld/HelloWorld.inf
+  ```
+    C:\\ MyWorkspace> build –a Ia32
   ```
 
-Specify the Module on the command line and use the active platform specified in the target.txt file.
+4. Build Module: HelloWorld.inf
 
-```
-  C:\\MyWorkspace> build –a IA32 –m MdeModulePkg/Application/HelloWorld/HelloWorld.inf
+  Specify the platform and Module on the command line.
+
+  ```
+    C:\\MyWorkspace> build -p Nt32Pkg\\Nt32Pkg.dsc –a IA32 –m MdeModulePkg/Application/HelloWorld/HelloWorld.inf
   ```
 
-Build the module in the current working directory if it contains a module description file and specify the platform on the command line.
+5. Specify the Module on the command line and use the active platform specified in the target.txt file.
 
-```
-  C:\\ MyWorkspace\\MdeModulePkg\\Application\\HelloWorld> build –a Ia32 –p Nt32Pkg\\Nt32Pkg.dsc
+  ```
+    C:\\MyWorkspace> build –a IA32 –m MdeModulePkg/Application/HelloWorld/HelloWorld.inf
   ```
 
-Build the module in the current working directory and use the active platform specified in the target.txt file.
+6. Build the module in the current working directory if it contains a module description file and
+   specify the platform on the command line.
 
-```
-  C:\\ MyWorkspace\\MdeModulePkg\\Application\\HelloWorld> build –a Ia32
+  ```
+    C:\\ MyWorkspace\\MdeModulePkg\\Application\\HelloWorld> build –a Ia32 –p Nt32Pkg\\Nt32Pkg.dsc
+  ```
+
+7. Build the module in the current working directory and use the active platform specified in the
+   target.txt file.
+
+  ```
+    C:\\ MyWorkspace\\MdeModulePkg\\Application\\HelloWorld> build –a Ia32
   ```
 
 Bugs
@@ -246,7 +248,7 @@ Bugs
 
 No known issues.
 
-Report bugs to edk2-devel@lists.01.org
+Report bugs to [edk2-devel@lists.01.org](mailto://edk2-devel@lists.01.org)
 
 Files
 ----------
